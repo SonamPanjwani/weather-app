@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <>
       <div
         className="bg-cover bg-center h-screen w-screen bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/background.jpg')" }}
+        style={{ backgroundImage: "url('https://imgur.com/fSotL2o')" }}
 
         // yaha par img element dalne se pura screen cover ni ho ra tha because
         // vo as a child me tha  main container
