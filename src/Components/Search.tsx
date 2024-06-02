@@ -70,7 +70,7 @@ const Search = ({
                 Search
               </button> */}
               <Link
-              to = "/data"
+                to="/forecastData"
                 className="p-2 bg-gray-600 rounded-lg cursor-pointer hover:text-lg h-[35px] w-[100px]"
                 onClick={onSubmit}
               >

@@ -2,9 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Forecast from "./Components/Forecast";
 import Search from "./Components/Search";
 import useForecast from "./hooks/useForecast";
-//import { BrowserRouter as Route, Routes } from "react-router-dom";
-//import { forecastType } from "./types";
-//import { useState } from "react";
 
 const App: React.FC = () => {
   const { term, options, forecast, onInputChange, onOptionSelect, onSubmit } =
@@ -20,14 +17,6 @@ const App: React.FC = () => {
         // humara div hai isliye div me inline css deni padi hai
       >
         <Routes>
-          {/* <Route path="/" element=
-            {
-              forecast ?
-                <Forecast data={forecast} />
-                : "ds"
-            }
-          /> */}
-
           <Route
             path="/"
             element={
@@ -41,7 +30,10 @@ const App: React.FC = () => {
             }
           />
           {forecast && (
-            <Route path="/data" element={<Forecast data={forecast} />} />
+            <Route
+              path="/forecastData"
+              element={<Forecast data={forecast} />}
+            />
           )}
         </Routes>
       </div>
