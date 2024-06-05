@@ -27,10 +27,10 @@ const Search = ({
         // vo as a child me tha  main container
         // humara div hai isliye div me inline css deni padi hai
       >
-        <div className="flex items-center justify-center text-center h-full w-full ">
+        <div className="flex items-center justify-center text-center h-auto w-auto ">
           <div
             className=" flex-col justify-center bg-white bg-opacity-20 
-           w-1/2 h-2/3 p-4 gap-7
+           w-auto h-auto p-4 gap-7
            backdrop:blur-lg drop-shadow-lg rounded-md
         h-500 w-500 items-center"
           >
