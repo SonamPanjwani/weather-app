@@ -28,15 +28,18 @@ const Forecast = ({ data }: Props) => {
   console.log(today);
   return (
     <>
-      <div className="flex items-center justify-center h-full w-full ">
+      <div className="flex items-center justify-center h-auto w-auto ">
         <div
           className=" flex-col justify-center bg-white bg-opacity-20 
-           w-1/3 h-screen gap-3
+           w-1/3 h-auto gap-3
            backdrop:blur-lg drop-shadow-lg rounded-md
             items-center"
         >
           <div className="">
-            <Link to="/" className="text-left bg-slate-600 text-black rounded-md pl-2 pr-2">
+            <Link
+              to="/"
+              className="text-left bg-slate-600 text-black rounded-md pl-2 pr-2"
+            >
               Go To Search
             </Link>
             <section className="text-center ">
