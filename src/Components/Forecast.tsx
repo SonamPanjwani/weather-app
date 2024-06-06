@@ -28,30 +28,30 @@ const Forecast = ({ data }: Props) => {
   console.log(today);
   return (
     <>
-      <div className="flex justify-center ">
+      <div className="flex justify-center p-4">
         <div
-          className=" flex-col  bg-white bg-opacity-20 
-           w-1/3 h-1/2 gap-5
+          className=" flex flex-col  bg-white bg-opacity-20 
+           w-full sm:w-2/3 lg:w-1/3 h-full gap-5
            backdrop:blur-lg drop-shadow-lg rounded-md
             items-center"
         >
-          <div className="">
+          <div className="w-full">
             <Link
               to="/"
-              className="text-left bg-slate-600 text-black rounded-md pl-2 pr-2"
+              className="text-left bg-slate-600 text-black rounded-md pl-2 pr-2 inline-block"
             >
               Go To Search
             </Link>
             <section className="text-center ">
               <h1 className="text-2xl "> {data.name}</h1>
-              <h4 className="text-l">{data.country}</h4>
+              <h4 className="text-lg">{data.country}</h4>
               <h1 className="text-xl">
                 <Degree temp={Math.round(today.main.temp)} />
               </h1>
               <p className="text-md">
                 {today.weather[0].main} {today.weather[0].description}
               </p>
-              <p className="text-l">
+              <p className="text-lg">
                 High: <Degree temp={Math.ceil(today.main.temp_max)} />
                 {`  `}
                 Low: <Degree temp={Math.floor(today.main.temp_min)} />
@@ -59,7 +59,7 @@ const Forecast = ({ data }: Props) => {
             </section>
           </div>
 
-          <section className="flex overflow-x-scroll m-2 pb-2 mb-2  gap-5">
+          <section className="flex overflow-x-scroll m-2 pb-2 mb-2  gap-5 w-full">
             {data.list.map((item, i) => {
               return (
                 <div
@@ -80,7 +80,7 @@ const Forecast = ({ data }: Props) => {
               );
             })}
           </section>
-          <section className="text-zinc-800">
+          <section className="text-zinc-800 w-full">
             <div className="flex justify-between gap-2 text-wrap text-lg mr-2 ml-2 mb-1 mt-1 p-1">
               <div
                 className="w-1/3 h-1/5 text-xs font-bold flex flex-col
