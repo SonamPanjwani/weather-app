@@ -30,18 +30,18 @@ const Search = ({
         <div className="flex items-center justify-center align-center text-center h-auto w-auto ">
           <div
             className=" flex-col justify-center bg-white bg-opacity-20 
-           w-auto h-auto p-4 gap-7
+           w-fit h-fit p-4 gap-7
            backdrop:blur-lg drop-shadow-lg rounded-md
-        h-500 w-500 items-center"
+         items-center"
           >
-            <h1 className="text-black text-center text-3xl ">
+            <h1 className="text-black text-center text-4xl ">
               Weather Forecast🌤️
             </h1>
-            <p className="m-7 p- 4 ">
+            <p className="m-7 p- 4 text-2xl">
               Enter and Select a place you want to know the weather report of !
             </p>
             <div className="flex gap-1 justify-center text-center">
-              <div className="flex-col text-left gap-0">
+              <div className="flex-col text-left gap-0 text-xl">
                 <input
                   type="text"
                   value={term}
@@ -72,7 +72,7 @@ const Search = ({
               </button> */}
               <Link
                 to="/forecastData"
-                className="p-2 bg-gray-600 rounded-lg cursor-pointer hover:text-lg h-[35px] w-[100px]"
+                className="p-2 mb-2 bg-gray-600 rounded-lg cursor-pointer hover:text-lg h-[35px] w-[100px]"
                 onClick={onSubmit}
               >
                 Search
