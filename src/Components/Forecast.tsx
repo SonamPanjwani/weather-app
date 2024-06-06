@@ -28,10 +28,10 @@ const Forecast = ({ data }: Props) => {
   console.log(today);
   return (
     <>
-      <div className="flex items-center justify-center h-screen w-screen ">
+      <div className="flex justify-center h-screen w-screen ">
         <div
-          className=" flex-col justify-center bg-white bg-opacity-20 
-           w-1/4 h-fit gap-5
+          className=" flex-col  bg-white bg-opacity-20 
+           w-1/3 h-screen gap-5
            backdrop:blur-lg drop-shadow-lg rounded-md
             items-center"
         >
