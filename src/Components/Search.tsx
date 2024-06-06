@@ -20,7 +20,7 @@ const Search = ({
   return (
     <>
       <div
-        className="bg-cover bg-center h-screen w-screen bg-no-repeat"
+        className=" flex justify-center bg-cover  bg-center h-screen w-screen bg-no-repeat"
         style={{ backgroundImage: "url('https://imgur.com/fSotL2o.jpg')" }}
 
         // yaha par img element dalne se pura screen cover ni ho ra tha because

@@ -28,10 +28,10 @@ const Forecast = ({ data }: Props) => {
   console.log(today);
   return (
     <>
-      <div className="flex items-center justify-center h-auto w-auto ">
+      <div className="flex items-center justify-center h-screen w-screen ">
         <div
           className=" flex-col justify-center bg-white bg-opacity-20 
-           w-1/3 h-auto gap-3
+           w-1/4 gap-5
            backdrop:blur-lg drop-shadow-lg rounded-md
             items-center"
         >
@@ -58,6 +58,7 @@ const Forecast = ({ data }: Props) => {
               </p>
             </section>
           </div>
+
           <section className="flex overflow-x-scroll m-2 pb-2 mb-2  gap-5">
             {data.list.map((item, i) => {
               return (
