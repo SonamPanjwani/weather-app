@@ -28,10 +28,10 @@ const Forecast = ({ data }: Props) => {
   console.log(today);
   return (
     <>
-      <div className="flex justify-center h-screen w-screen ">
+      <div className="flex justify-center ">
         <div
           className=" flex-col  bg-white bg-opacity-20 
-           w-1/3 h-screen gap-5
+           w-1/3 h-1/2 gap-5
            backdrop:blur-lg drop-shadow-lg rounded-md
             items-center"
         >
@@ -83,7 +83,7 @@ const Forecast = ({ data }: Props) => {
           <section className="text-zinc-800">
             <div className="flex justify-between gap-2 text-wrap text-lg mr-2 ml-2 mb-1 mt-1 p-1">
               <div
-                className="w-[150px] text-xs font-bold flex flex-col
+                className="w-1/3 h-1/5 text-xs font-bold flex flex-col
             items-center bg-white/20 backdrop:blur-lg rounded 
             drop-shadow-lg p-2 mb-1"
               >
@@ -91,7 +91,7 @@ const Forecast = ({ data }: Props) => {
                 <span className="mt-3"> {getSunTime(data.sunrise)}</span>
               </div>
               <div
-                className="w-[150px] text-xs font-bold flex flex-col
+                className="w-1/3 h-1/5 text-xs font-bold flex flex-col
             items-center bg-white/20 backdrop:blur-lg rounded 
             drop-shadow-lg p-2 mb-1"
               >
@@ -99,7 +99,7 @@ const Forecast = ({ data }: Props) => {
                 <span className="mt-3"> {getSunTime(data.sunset)}</span>
               </div>
             </div>
-            <div className=" flex justify-between gap-2  text-wrap text-lg mb-1 mr-2 ml-2 p-1">
+            <div className=" flex justify-between gap-2  text-wrap text-lg mb-1 mr-2 ml-2  mt-1 p-1">
               {/* wind direction */}
               <Tile
                 icon="wind"
