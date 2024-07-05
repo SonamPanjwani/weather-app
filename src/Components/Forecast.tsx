@@ -31,75 +31,80 @@ const Forecast = ({ data }: Props) => {
       <div className="flex justify-center p-4">
         <div
           className=" flex flex-col  bg-white bg-opacity-20 
-           w-full sm:w-2/3 lg:w-1/3 h-full gap-5
+           w-1/3  gap-3
            backdrop:blur-lg drop-shadow-lg rounded-md
             items-center"
         >
-          <div className="w-full">
+          <div className="w-full ">
             <Link
               to="/"
               className="text-left bg-slate-600 text-black rounded-md pl-2 pr-2 inline-block"
             >
               Go To Search
             </Link>
-            <section className="text-center ">
-              <h1 className="text-2xl "> {data.name}</h1>
-              <h4 className="text-lg">{data.country}</h4>
+            <section className="text-center">
               <h1 className="text-xl">
+                <strong>{data.name}</strong>
+              </h1>
+              <h4 className="text-base">{data.country}</h4>
+              <h1 className="text-base">
                 <Degree temp={Math.round(today.main.temp)} />
               </h1>
-              <p className="text-md">
+              <p className="text-sm">
                 {today.weather[0].main} {today.weather[0].description}
               </p>
-              <p className="text-lg">
-                High: <Degree temp={Math.ceil(today.main.temp_max)} />
-                {`  `}
-                Low: <Degree temp={Math.floor(today.main.temp_min)} />
+              <p className="text-sm">
+                <strong>High </strong>
+                <Degree temp={Math.ceil(today.main.temp_max)} />
+                <strong> Low </strong>
+                <Degree temp={Math.floor(today.main.temp_min)} />
               </p>
             </section>
           </div>
 
-          <section className="flex overflow-x-scroll m-2 pb-2 mb-2  gap-5 w-full">
+          <section className="flex overflow-x-scroll m-2 pb-2 mb-2 gap-2 w-full">
             {data.list.map((item, i) => {
               return (
                 <div
                   key={i}
                   className="inline-block text-center w-[50px] flex-shrink-0"
                 >
-                  <p>
+                  <p className="text-xs">
                     <TimeAmPm time={item.dt} index={i} />
                   </p>
                   <img
                     alt={`weather-icon-${item.weather[0].description}`}
                     src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
                   ></img>
-                  <p className="text-sm font-bold">
+                  <p className="text-xs font-bold">
                     <Degree temp={Math.round(item.main.temp)} />
                   </p>
                 </div>
               );
             })}
           </section>
-          <section className="text-zinc-800 w-full">
-            <div className="flex justify-between gap-2 text-wrap text-lg mr-2 ml-2 mb-1 mt-1 p-1">
+          <section className="text-zinc-800 w-full text-center">
+            <div className="flex justify-between gap-2 text-wrap text-sm mr-2 ml-2">
               <div
-                className="w-1/3 h-1/5 text-xs font-bold flex flex-col
+                className="w-[150px] h-[90px] text-xs font-bold flex flex-col
             items-center bg-white/20 backdrop:blur-lg rounded 
             drop-shadow-lg p-2 mb-1"
               >
-                <Sunrise />{" "}
+                <Sunrise />
                 <span className="mt-3"> {getSunTime(data.sunrise)}</span>
+                <p> Sunrise </p>
               </div>
               <div
-                className="w-1/3 h-1/5 text-xs font-bold flex flex-col
+                className="w-[150px] h-[90px] text-xs font-bold flex flex-col
             items-center bg-white/20 backdrop:blur-lg rounded 
             drop-shadow-lg p-2 mb-1"
               >
                 <Sunset />
                 <span className="mt-3"> {getSunTime(data.sunset)}</span>
+                <p> Sunset </p>
               </div>
             </div>
-            <div className=" flex justify-between gap-2  text-wrap text-lg mb-1 mr-2 ml-2  mt-1 p-1">
+            <div className="flex justify-between gap-2  text-wrap text-sm mr-2 ml-2 p-1">
               {/* wind direction */}
               <Tile
                 icon="wind"
@@ -122,7 +127,7 @@ const Forecast = ({ data }: Props) => {
                 }`}
               />
             </div>
-            <div className=" flex justify-between gap-2 text-wrap mr-2 ml-2 mb-1 p-1">
+            <div className=" flex justify-between gap-2 text-wrap text-center mr-2 ml-2 p-1">
               {/* Humidity */}
               <Tile
                 icon="humidity"
@@ -141,7 +146,7 @@ const Forecast = ({ data }: Props) => {
                 }`}
               />
             </div>
-            <div className="flex justify-between gap-2 text-wrap text-lg mr-2 ml-2 mb-1 p-1">
+            <div className="flex justify-between gap-2 text-wrap text-sm mr-2 ml-2 p-1">
               {/* Visibility */}
               <Tile
                 icon="visibility"
